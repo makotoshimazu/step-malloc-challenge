@@ -1,5 +1,4 @@
-
-SRCS := malloc_challenge_shimazu.c simple_malloc.c
+SRCS := malloc_challenge_shimazu.c simple_malloc.c my_malloc.c
 OBJS = $(SRCS:.c=.o)
 DEPS = $(SRCS:.c=.d)
 
@@ -15,7 +14,7 @@ $(TARGET): $(OBJS)
 	$(LD) $(LDFLAGS) -o $@ $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -MMD -c -o $@ $^
+	$(CC) $(CFLAGS) -MMD -c -o $@ $<
 
 .PHONY: clean
 clean:
