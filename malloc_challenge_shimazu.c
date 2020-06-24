@@ -376,5 +376,6 @@ int main(int argc, char** argv) {
   srand(12);  // Set the rand seed to make the challenges non-deterministic.
   test();
   run_challenges();
+  my_finalize();
   return 0;
 }
